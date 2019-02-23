@@ -66,9 +66,9 @@ public class SmokeTest {
 			"sanity", "2" }, priority = 2)
 	public void login_positive() {
 		/*
-		 home.logoutOfAPP(); home.tapSignin();
-		  login.loginToAPP(Configuration.username, Configuration.password);
-		  home.validateHome();
+		 * home.logoutOfAPP(); home.tapSignin();
+		 * login.loginToAPP(Configuration.username, Configuration.password);
+		 * home.validateHome();
 		 */
 
 	}
