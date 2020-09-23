@@ -15,6 +15,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Reporter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Configuration {
 
 	public static Properties properties = new Properties(); // Here we imported
@@ -63,12 +65,13 @@ public class Configuration {
 		}
 		else if (Browser.equalsIgnoreCase("chrome")) {
 			if(driver==null){
-			String filepath = "src/test/resources/chromedriver.exe";
-			filepath = System.getProperty("user.dir") + "/" + filepath;
-			File file = new File(filepath);
-			System.setProperty("webdriver.chrome.driver",
-					file.getAbsolutePath());
-
+				/*
+				 * String filepath = "src/test/resources/chromedriver.exe"; filepath =
+				 * System.getProperty("user.dir") + "/" + filepath; File file = new
+				 * File(filepath); System.setProperty("webdriver.chrome.driver",
+				 * file.getAbsolutePath());
+				 */
+				WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			}
 			else 
