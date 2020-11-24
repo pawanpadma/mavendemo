@@ -10,8 +10,8 @@ pipeline {
             }
             stage('Install Dependencies'){
                 steps{                    
-                    powershell 'docker pull elgalu/selenium'
-                    powershell 'docker pull dosel/zalenium'
+                    sh 'docker pull elgalu/selenium'
+                    sh 'docker pull dosel/zalenium'
                 }
             }
             }
