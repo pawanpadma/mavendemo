@@ -1,5 +1,5 @@
 pipeline {
-    agent label    
+    agent { label 'laptop2'}    
     stages {
         stage('Code and Dependencies'){
             parallel{
